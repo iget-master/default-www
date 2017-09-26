@@ -1,4 +1,4 @@
-# LEMP Stack
+# Default WWW
 
 This docker image is the base for any web development on iGet.
 
