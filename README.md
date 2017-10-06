@@ -17,3 +17,14 @@ In addition to default PHP extensions, the following extensions are present:
 - ext-mbstring
 - ext-memcached
 - ext-tidy
+
+The `nginx` is configured to serve `/var/www` on port 80 in this order of priority:
+
+- public/index.html
+- public/index.htm
+- public/index.php
+- index.html
+- index.htm
+- index.php
+
+This allow compatibility with Laravel applications, since index isn't on root.
