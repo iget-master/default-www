@@ -58,5 +58,7 @@ COPY supervisord/* /etc/supervisor/conf.d/
 # Expose HTTP port
 EXPOSE 80
 
+WORKDIR /var/www
+
 CMD ["/scripts/run.sh"]
 
