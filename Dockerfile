@@ -42,6 +42,8 @@ COPY conf/php/* /etc/php/7.1/fpm/conf.d
 COPY conf/nginx/conf.d/* /etc/nginx/conf.d
 COPY conf/nginx/sites/* /etc/nginx/sites-enabled
 COPY conf/nginx/sites/* /etc/nginx/sites-available
+COPY conf/supervisor/* /etc/supervisor/conf.d/
+COPY conf/supervisord.conf /etc/supervisor/supervisord.conf
 
 # Disable default site on nginx
 RUN rm -rf /etc/nginx/sites-enabled/default
@@ -51,9 +53,6 @@ RUN sed -i 's/;daemonize = yes/daemonize = no/g' /etc/php/7.1/fpm/php-fpm.conf
 
 # Create run directories for mysql and php-fpm
 RUN mkdir /var/run/php
-
-# Add supervisord configuration files
-COPY supervisord/* /etc/supervisor/conf.d/
 
 # Expose HTTP port
 EXPOSE 80
