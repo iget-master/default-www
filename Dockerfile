@@ -31,6 +31,7 @@ RUN apt -y update && apt install -y \
     php7.1-zip \
     php7.1-dom \
     php-xdebug \
+    php-soap \
     mysql-client-5.7 \
     composer \
     nodejs \
