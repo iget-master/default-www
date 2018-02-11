@@ -49,7 +49,7 @@ COPY conf/supervisord.conf /etc/supervisor/supervisord.conf
 RUN rm -rf /etc/nginx/sites-enabled/default
 
 # Disable daemon mode on php-fpm
-RUN sed -i 's/;daemonize = yes/daemonize = no/g' /etc/php/7.1/fpm/php-fpm.conf
+RUN sed -i 's/;daemonize = yes/daemonize = no/g' /etc/php/7.2/fpm/php-fpm.conf
 
 # Create run directories for mysql and php-fpm
 RUN mkdir /var/run/php
