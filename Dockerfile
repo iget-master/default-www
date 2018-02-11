@@ -20,16 +20,15 @@ RUN apt -y update && apt install -y \
     memcached \
     nginx \
     php-memcached \
-    php7.1 \
-    php7.1-gd \
-    php7.1-curl \
-    php7.1-fpm \
-    php7.1-mcrypt \
-    php7.1-mbstring \
-    php7.1-mysql \
-    php7.1-tidy \
-    php7.1-zip \
-    php7.1-dom \
+    php7.2 \
+    php7.2-gd \
+    php7.2-curl \
+    php7.2-fpm \
+    php7.2-mbstring \
+    php7.2-mysql \
+    php7.2-tidy \
+    php7.2-zip \
+    php7.2-xml \
     php-xdebug \
     php-soap \
     mysql-client-5.7 \
