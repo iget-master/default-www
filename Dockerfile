@@ -38,7 +38,7 @@ RUN apt -y update && apt install -y \
     && echo 'Packages installed'
 
 # Add configuration files
-COPY conf/php/* /etc/php/7.1/fpm/conf.d
+COPY conf/php/* /etc/php/7.2/fpm/conf.d
 COPY conf/nginx/conf.d/* /etc/nginx/conf.d
 COPY conf/nginx/sites/* /etc/nginx/sites-enabled
 COPY conf/nginx/sites/* /etc/nginx/sites-available
