@@ -29,13 +29,12 @@ RUN apt -y update && apt install -y \
     php7.2-tidy \
     php7.2-zip \
     php7.2-xml \
-    php-xdebug \
     php-soap \
     mysql-client-5.7 \
     composer \
     nodejs \
     supervisor \
-    && echo 'Packages installed'
+    && rm -rf /var/lib/apt/lists/* && echo 'Packages installed and lists cleaned'
 
 # Add configuration files
 COPY conf/php/* /etc/php/7.2/fpm/conf.d
