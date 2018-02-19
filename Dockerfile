@@ -17,6 +17,7 @@ RUN apt-get clean && apt-get -y update && apt-get install -y locales software-pr
   && locale-gen en_US.UTF-8
 RUN LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php
 RUN apt -y update && apt install -y --no-install-recommends \
+    git \
     nginx \
     php7.2 \
     php7.2-gd \
