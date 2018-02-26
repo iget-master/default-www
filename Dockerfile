@@ -20,6 +20,7 @@ RUN apt -y update && apt install -y --no-install-recommends \
     git \
     nginx \
     php7.2 \
+    php7.2-xdebug \
     php7.2-gd \
     php7.2-curl \
     php7.2-fpm \
