@@ -31,10 +31,12 @@ RUN apt -y update && apt install -y --no-install-recommends \
     php7.1-redis \
     php7.1-soap \
     mysql-client-5.7 \
-    composer \
     nodejs \
     supervisor \
+    wget \
     && rm -rf /var/lib/apt/lists/* && echo 'Packages installed and lists cleaned'
+
+RUN /scripts/setup-composer.sh
 
 # Add configuration files
 COPY conf/php/* /etc/php/7.1/fpm/conf.d
