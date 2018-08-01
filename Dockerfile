@@ -36,7 +36,7 @@ RUN apt -y update && apt install -y --no-install-recommends \
     wget \
     && rm -rf /var/lib/apt/lists/* && echo 'Packages installed and lists cleaned'
 
-RUN /scripts/setup-composer.sh
+RUN /scripts/setup-composer.sh && mv composer.phar /usr/bin/composer
 
 # Add configuration files
 COPY conf/php/* /etc/php/7.1/fpm/conf.d
