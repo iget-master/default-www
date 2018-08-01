@@ -29,7 +29,7 @@ RUN apt -y update && apt install -y --no-install-recommends \
     php7.1-zip \
     php7.1-xml \
     php7.1-redis \
-    php-soap \
+    php7.1-soap \
     mysql-client-5.7 \
     composer \
     nodejs \
