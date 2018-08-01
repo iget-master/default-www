@@ -19,16 +19,16 @@ RUN LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php
 RUN apt -y update && apt install -y --no-install-recommends \
     git \
     nginx \
-    php7.2 \
-    php7.2-gd \
-    php7.2-curl \
-    php7.2-fpm \
-    php7.2-mbstring \
-    php7.2-mysql \
-    php7.2-tidy \
-    php7.2-zip \
-    php7.2-xml \
-    php7.2-redis \
+    php7.1 \
+    php7.1-gd \
+    php7.1-curl \
+    php7.1-fpm \
+    php7.1-mbstring \
+    php7.1-mysql \
+    php7.1-tidy \
+    php7.1-zip \
+    php7.1-xml \
+    php7.1-redis \
     php-soap \
     mysql-client-5.7 \
     composer \
@@ -37,7 +37,7 @@ RUN apt -y update && apt install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/* && echo 'Packages installed and lists cleaned'
 
 # Add configuration files
-COPY conf/php/* /etc/php/7.2/fpm/conf.d
+COPY conf/php/* /etc/php/7.1/fpm/conf.d
 COPY conf/nginx/conf.d/* /etc/nginx/conf.d
 COPY conf/nginx/sites/* /etc/nginx/sites-enabled
 COPY conf/nginx/sites/* /etc/nginx/sites-available
@@ -48,7 +48,7 @@ COPY conf/supervisord.conf /etc/supervisor/supervisord.conf
 RUN rm -rf /etc/nginx/sites-enabled/default
 
 # Disable daemon mode on php-fpm
-RUN sed -i 's/;daemonize = yes/daemonize = no/g' /etc/php/7.2/fpm/php-fpm.conf
+RUN sed -i 's/;daemonize = yes/daemonize = no/g' /etc/php/7.1/fpm/php-fpm.conf
 
 # Create run directories for mysql and php-fpm
 RUN mkdir /var/run/php
