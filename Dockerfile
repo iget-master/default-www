@@ -30,13 +30,14 @@ RUN apt -y update && apt install -y --no-install-recommends \
     php7.1-xml \
     php7.1-redis \
     php7.1-soap \
+    php7.1-mcrypt \
     mysql-client-5.7 \
     nodejs \
     supervisor \
     wget \
     && rm -rf /var/lib/apt/lists/* && echo 'Packages installed and lists cleaned'
 
-RUN /scripts/setup-composer.sh && mv composer.phar /usr/bin/composer
+RUN /scripts/setup-composer.sh && mv composer.phar /usr/bin/composer && composer global require hirak/prestissimo
 
 # Add configuration files
 COPY conf/php/* /etc/php/7.1/fpm/conf.d
