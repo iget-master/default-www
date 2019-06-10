@@ -1,5 +1,4 @@
-FROM ubuntu:16.04
-
+FROM ubuntu:18.04
 
 # Define default answers for debconf and set
 # debian frontend to noninteractive mode.
@@ -8,18 +7,17 @@ RUN chmod +x /scripts/*
 RUN /scripts/defaults.sh
 RUN export DEBIAN_FRONTEND=noninteractive
 
-ADD https://deb.nodesource.com/setup_6.x /scripts/nodejs.sh
+ADD https://deb.nodesource.com/setup_10.x /scripts/nodejs.sh
 RUN chmod +x /scripts/nodejs.sh && sync && /scripts/nodejs.sh
 RUN rm -f /scripts/nodejs.sh
 
 # Install packages
-RUN apt-get clean && apt-get -y update && apt-get install -y locales software-properties-common \
-  && locale-gen en_US.UTF-8
-RUN LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php
-RUN apt -y update && apt install -y \
-    memcached \
+RUN apt-get clean && apt-get -y update && apt-get install -y locales software-properties-common && \
+    locale-gen en_US.UTF-8 && \
+    LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php && \
+    apt -y update && apt install -y \
     nginx \
-    php-memcached \
+    gnupg \
     php7.2 \
     php7.2-gd \
     php7.2-curl \
