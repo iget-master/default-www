@@ -16,6 +16,7 @@ RUN apt-get clean && apt-get -y update && apt-get install -y locales software-pr
     locale-gen en_US.UTF-8 && \
     LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php && \
     apt -y update && apt install -y \
+    git \
     nginx \
     gnupg \
     php7.2 \
@@ -27,13 +28,13 @@ RUN apt-get clean && apt-get -y update && apt-get install -y locales software-pr
     php7.2-tidy \
     php7.2-zip \
     php7.2-xml \
-    php-xdebug \
+    php7.2-redis \
     php-soap \
     mysql-client-5.7 \
     composer \
     nodejs \
     supervisor \
-    && echo 'Packages installed'
+    && rm -rf /var/lib/apt/lists/* && echo 'Packages installed and lists cleaned'
 
 # Add configuration files
 COPY conf/php/* /etc/php/7.2/fpm/conf.d
