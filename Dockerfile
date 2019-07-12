@@ -22,16 +22,16 @@ RUN apt-get clean && apt-get -y update && apt-get install -y locales software-pr
     git \
     nginx \
     gnupg \
-    php7.2 \
-    php7.2-gd \
-    php7.2-curl \
-    php7.2-fpm \
-    php7.2-mbstring \
-    php7.2-mysql \
-    php7.2-tidy \
-    php7.2-zip \
-    php7.2-xml \
-    php7.2-redis \
+    php7.3 \
+    php7.3-gd \
+    php7.3-curl \
+    php7.3-fpm \
+    php7.3-mbstring \
+    php7.3-mysql \
+    php7.3-tidy \
+    php7.3-zip \
+    php7.3-xml \
+    php7.3-redis \
     php-soap \
     mysql-client-5.7 \
     nodejs \
@@ -43,7 +43,7 @@ RUN apt-get clean && apt-get -y update && apt-get install -y locales software-pr
 RUN /scripts/install-composer.sh
 
 # Add configuration files
-COPY conf/php/* /etc/php/7.2/fpm/conf.d
+COPY conf/php/* /etc/php/7.3/fpm/conf.d
 COPY conf/nginx/conf.d/* /etc/nginx/conf.d
 COPY conf/nginx/sites/* /etc/nginx/sites-enabled
 COPY conf/nginx/sites/* /etc/nginx/sites-available
@@ -54,7 +54,7 @@ COPY conf/supervisord.conf /etc/supervisor/supervisord.conf
 RUN rm -rf /etc/nginx/sites-enabled/default
 
 # Disable daemon mode on php-fpm
-RUN sed -i 's/;daemonize = yes/daemonize = no/g' /etc/php/7.2/fpm/php-fpm.conf
+RUN sed -i 's/;daemonize = yes/daemonize = no/g' /etc/php/7.3/fpm/php-fpm.conf
 
 # Create run directories for mysql and php-fpm
 RUN mkdir /var/run/php
