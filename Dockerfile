@@ -28,6 +28,7 @@ RUN apt-get clean && apt-get -y update && apt-get install -y locales software-pr
     php7.3-fpm \
     php7.3-mbstring \
     php7.3-mysql \
+    php7.3-sqlite \
     php7.3-tidy \
     php7.3-zip \
     php7.3-xml \
