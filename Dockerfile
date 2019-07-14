@@ -33,6 +33,7 @@ RUN apt-get clean && apt-get -y update && apt-get install -y locales software-pr
     php7.3-zip \
     php7.3-xml \
     php7.3-redis \
+    php7.3-xdebug \
     php-soap \
     mysql-client-5.7 \
     nodejs \
