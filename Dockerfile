@@ -34,7 +34,7 @@ RUN apt-get clean && apt-get -y update && apt-get install -y locales software-pr
     php7.2-redis \
     php-soap \
     mysql-client-5.7 \
-    libapache2-mod-php \
+    libapache2-mod-php7.2 \
     nodejs \
     supervisor \
     wget \
