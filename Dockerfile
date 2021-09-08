@@ -32,7 +32,7 @@ RUN apt-get clean && apt-get -y update && apt-get install -y locales software-pr
     php7.2-zip \
     php7.2-xml \
     php7.2-redis \
-    php-soap \
+    php7.2-soap \
     mysql-client-5.7 \
     nodejs \
     supervisor \
