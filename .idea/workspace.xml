@@ -4,7 +4,6 @@
     <list default="true" id="60aec1d3-a60d-444d-b43e-90e8c1c9655c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ondrej-ubuntu-php-xenial.list" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +134,8 @@
       <workItem from="1560201784431" duration="90000" />
       <workItem from="1560202072085" duration="337000" />
       <workItem from="1642507300900" duration="10000" />
-      <workItem from="1642534851623" duration="351000" />
+      <workItem from="1642534851623" duration="1299000" />
+      <workItem from="1642593138444" duration="174000" />
     </task>
     <servers />
   </component>

@@ -22,17 +22,17 @@ RUN apt-get clean && apt-get -y update && apt-get install -y locales software-pr
     git \
     nginx \
     gnupg \
-    php8.0 \
-    php8.0-gd \
-    php8.0-curl \
-    php8.0-fpm \
-    php8.0-mbstring \
-    php8.0-mysql \
-    php8.0-tidy \
-    php8.0-zip \
-    php8.0-xml \
-    php8.0-redis \
-    php8.0-soap \
+    php8.1 \
+    php8.1-gd \
+    php8.1-curl \
+    php8.1-fpm \
+    php8.1-mbstring \
+    php8.1-mysql \
+    php8.1-tidy \
+    php8.1-zip \
+    php8.1-xml \
+    php8.1-redis \
+    php8.1-soap \
     mysql-client-8.0 \
     nodejs \
     supervisor \
@@ -43,7 +43,7 @@ RUN apt-get clean && apt-get -y update && apt-get install -y locales software-pr
 RUN /scripts/install-composer.sh
 
 # Add configuration files
-COPY conf/php/* /etc/php/8.0/fpm/conf.d
+COPY conf/php/* /etc/php/8.1/fpm/conf.d
 COPY conf/nginx/conf.d/* /etc/nginx/conf.d
 COPY conf/nginx/sites/* /etc/nginx/sites-enabled
 COPY conf/nginx/sites/* /etc/nginx/sites-available
@@ -54,7 +54,7 @@ COPY conf/supervisord.conf /etc/supervisor/supervisord.conf
 RUN rm -rf /etc/nginx/sites-enabled/default
 
 # Disable daemon mode on php-fpm
-RUN sed -i 's/;daemonize = yes/daemonize = no/g' /etc/php/8.0/fpm/php-fpm.conf
+RUN sed -i 's/;daemonize = yes/daemonize = no/g' /etc/php/8.1/fpm/php-fpm.conf
 
 # Create run directories for mysql and php-fpm
 RUN mkdir /var/run/php
