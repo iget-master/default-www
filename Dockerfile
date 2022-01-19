@@ -7,7 +7,7 @@ RUN chmod +x /scripts/*
 RUN /scripts/defaults.sh
 RUN export DEBIAN_FRONTEND=noninteractive
 
-ADD https://deb.nodesource.com/setup_10.x /scripts/nodejs.sh
+ADD https://deb.nodesource.com/setup_12.x /scripts/nodejs.sh
 RUN chmod +x /scripts/nodejs.sh && sync && /scripts/nodejs.sh
 RUN rm -f /scripts/nodejs.sh
 

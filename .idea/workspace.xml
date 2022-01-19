@@ -4,6 +4,8 @@
     <list default="true" id="60aec1d3-a60d-444d-b43e-90e8c1c9655c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/nginx/sites/any.conf" beforeDir="false" afterPath="$PROJECT_DIR$/conf/nginx/sites/any.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/start-php-fpm.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/start-php-fpm.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,8 +98,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../docker-cdtsys-www" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -135,7 +139,9 @@
       <workItem from="1560202072085" duration="337000" />
       <workItem from="1642507300900" duration="10000" />
       <workItem from="1642534851623" duration="1299000" />
-      <workItem from="1642593138444" duration="174000" />
+      <workItem from="1642593138444" duration="477000" />
+      <workItem from="1642594661137" duration="121000" />
+      <workItem from="1642594938917" duration="413000" />
     </task>
     <servers />
   </component>
